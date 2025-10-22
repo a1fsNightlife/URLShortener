@@ -24,9 +24,9 @@ public class UrlService {
         return mapEntityToModel(urlEntity);
     }
 
-    public String getShortenUrl(String alias) {
+    public String getByShortenUrl(String alias) {
         UrlEntity urlEntity = urlRepo.findUrlEntityByAlias(alias);
-        return urlEntity.getAlias();
+        return urlEntity.getOriginalUrl();
     }
 
     private Url mapEntityToModel(UrlEntity urlEntity) {

@@ -18,7 +18,7 @@ public class UrlController {
     }
 
     @GetMapping(value = "/{alias}")
-    public String getShortenUrl(@PathVariable String alias) {
-        return urlService.getShortenUrl(alias);
+    public String getByShortenUrl(@PathVariable String alias) {
+        return urlService.getByShortenUrl(alias);
     }
 }
